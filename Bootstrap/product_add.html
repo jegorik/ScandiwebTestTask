@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List Add</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<div class="form-header-style" id="form-header">Product Add
+    <input type="submit" value="Save" id="save-button" form="product-form">
+    <a href="product_list.html" class="btn">List products page</a>
+</div>
+<form id="product-form">
+    <div>
+        <label class="form-input-label" for="sku-field" id="sku-label">SKU:</label>
+        <input type="text" class="input-field" id="sku-field" name="sku" required maxlength="20"
+               pattern="[a-zA-Z0-9]{3,20}">
+    </div>
+    <div>
+        <label class="form-input-label" for="name-field" id="name-label">Name:</label>
+        <input type="text" class="input-field" id="name-field" name="name" required maxlength="50"
+               pattern="[a-zA-Z0-9\s']{2,50}">
+    </div>
+
+    <div>
+        <label class="form-input-label" for="price-field" id="price-label">Price:</label>
+        <input type="number" inputmode="decimal" min="0.1" step=".01" class="input-field" id="price-field" name="price"
+               required oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="8">
+    </div>
+
+    <div>
+        <label class="switch-label" for="product-field" id="product-switch">Type Switcher:</label>
+        <select class="switch-field" id="product-field" name="product" required onchange="showBlock(value)">
+            <option selected hidden value="">Select Product</option>
+            <option value="dvd">DVD Disk</option>
+            <option value="book">Book</option>
+            <option value="furniture">Furniture</option>
+        </select>
+    </div>
+
+    <div id="hidden_section">
+        <div class="hidden-block" id="dvd">
+            <label class="form-input-label" for="dvd-field" id="size_label">Size:</label>
+            <input type="number" inputmode="decimal" min="0.1" step=".01" class="hidden-input" id="dvd-field" name="size"
+                   oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="5">
+            <label class="hint-label">Please provide disk size in Mb.</label>
+        </div>
+
+        <div class="hidden-block" id="book">
+            <label class="form-input-label" for="book-field" id="book_label">Weight:</label>
+            <input type="number" inputmode="decimal" min="0.1" step=".01" class="hidden-input" id="book-field"
+                   name="weight"
+                   oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4">
+            <label class="hint-label">Please provide book weight in Kg.</label>
+        </div>
+
+
+        <div class="hidden-block" id="furniture">
+            <div>
+                <label class="form-input-label" for="furniture-field1" id="height-label">Height:</label>
+                <input type="number" inputmode="decimal" min="1" step=".01" class="hidden-input" id="furniture-field1"
+                       name="height" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="5">
+            </div>
+            <div>
+                <label class="form-input-label" for="furniture-field2" id="width-label">Width:</label>
+                <input type="number" inputmode="decimal" min="1" step=".01" class="hidden-input" id="furniture-field2"
+                       name="width" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="5">
+            </div>
+            <div>
+                <label class="form-input-label" for="furniture-field3" id="length-label">Length:</label>
+                <input type="number" inputmode="decimal" min="1" step=".01" class="hidden-input" id="furniture-field3"
+                       name="length" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="5">
+                <label class="hint-label">Please provide dimensions in HxWxL format using cm.</label>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="js/product-list.js"></script>
+</body>
+</html>

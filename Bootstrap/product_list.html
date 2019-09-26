@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<div class="form-header-style" id="form-header">Product list
+    <select class="switch-field2" name="switcher" required id="switcher">
+        <option selected hidden value="">Select</option>
+        <option value="dvd">DVD Disk</option>
+        <option value="book">Book</option>
+        <option value="furniture">Furniture</option>
+        <option value="mass_delete">Mass Delete Action</option>
+    </select>
+    <input type="button" id="save-button" value="Apply" onclick="doAction()">
+    <a href="product_add.html" class="btn">Product ADD page</a>
+</div>
+<body>
+<div class="main"></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/product-list.js"></script>
+</body>
+</html>

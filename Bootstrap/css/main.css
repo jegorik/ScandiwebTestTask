@@ -26,15 +26,16 @@ input:focus:required:invalid {
 }
 
 .form-check-input {
-    margin: -10% -2% -2% -2%;
-
+    position: absolute;
+    top: 2%;
+    left: 11%;
 }
 
 .content {
     position: absolute;
+    top: 1%;
     height: 100%;
     width: 100%;
-    padding: 10% 5%;
 }
 
 .form-input-label {
@@ -95,7 +96,7 @@ input:focus:required:invalid {
         position: absolute;
         font-size: 70%;
         top: 40%;
-        left: 80%;
+        left: 78%;
         min-width: 10%;
     }
 }

@@ -59,12 +59,12 @@ function makeGrid(item)
         var mainForm = $("<div>", {class: "main"}).appendTo("body");
         var productCard = $("<div>", {class: "productCard"}).appendTo(mainForm);
         var content = $("<div>", {class: "content"}).appendTo(productCard);
-        var sku = $("<div>", {text: item[0], class: "productData"}).appendTo(content);
+        var sku = $("<div>", {text: item.sku, class: "productData"}).appendTo(content);
         var checkBox = $("<input>", {type: "checkbox", class: "form-check-input", name: item.sku}).appendTo(content);
-        var name = $("<div>", {text: item[1], class: "productData"}).appendTo(content);
-        var price = $("<div>", {text: item[2] + " $", class: "productData"}).appendTo(content);
-        var product = $("<div>", {text: item[3], class: "productData"}).appendTo(content);
-        var attribute = $("<div>", {text: item[4], class: "productData"}).appendTo(content);
+        var name = $("<div>", {text: item.name, class: "productData"}).appendTo(content);
+        var price = $("<div>", {text: item.price + " $", class: "productData"}).appendTo(content);
+        var product = $("<div>", {text: item.product, class: "productData"}).appendTo(content);
+        var attribute = $("<div>", {text: item.attribute, class: "productData"}).appendTo(content);
 }
 
 /*

@@ -54,17 +54,22 @@ function removeFromDB()
 /*
 This function makes grid for selected products at web page
  */
-function makeGrid(item)
-{
-        var mainForm = $("<div>", {class: "main"}).appendTo("body");
-        var productCard = $("<div>", {class: "productCard"}).appendTo(mainForm);
-        var content = $("<div>", {class: "content"}).appendTo(productCard);
-        var sku = $("<div>", {text: item.sku, class: "productData"}).appendTo(content);
-        var checkBox = $("<input>", {type: "checkbox", class: "form-check-input", name: item.sku}).appendTo(content);
-        var name = $("<div>", {text: item.name, class: "productData"}).appendTo(content);
-        var price = $("<div>", {text: item.price + " $", class: "productData"}).appendTo(content);
-        var product = $("<div>", {text: item.product, class: "productData"}).appendTo(content);
-        var attribute = $("<div>", {text: item.attribute, class: "productData"}).appendTo(content);
+
+function makeGrid(item) {
+    var mainForm = $("<div>", {class: "main"}).appendTo("body");
+    var productCard = $("<div>", {class: "productCard"}).appendTo(mainForm);
+    var content = $("<table>", {class: "content"}).appendTo(productCard);
+    var skurow = $("<tr>", {class: "text"}).appendTo(content);
+    var sku = $("<td>", {text: item.sku, class: "productData"}).appendTo(skurow);
+    var checkBox = $("<input>", {type: "checkbox", class: "form-check-input", name: item.sku}).appendTo(content);
+    var namerow = $("<tr>", {class: "text"}).appendTo(content);
+    var name = $("<td>", {text: item.name, class: "productData"}).appendTo(namerow);
+    var pricerow = $("<tr>", {class: "text"}).appendTo(content);
+    var price = $("<td>", {text: item.price + " $", class: "productData"}).appendTo(pricerow);
+    var productrow = $("<tr>", {class: "text"}).appendTo(content);
+    var product = $("<td>", {text: item.product, class: "productData"}).appendTo(productrow);
+    var attributerow = $("<tr>", {class: "text"}).appendTo(content);
+    var attribute = $("<td>", {text: item.attribute, class: "productData"}).appendTo(attributerow);
 }
 
 /*

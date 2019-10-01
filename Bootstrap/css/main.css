@@ -33,6 +33,7 @@ input:focus:required:invalid {
 
 .content {
     position: absolute;
+    text-align: center;
     top: 1%;
     height: 100%;
     width: 100%;
@@ -54,12 +55,10 @@ input:focus:required:invalid {
     min-width: 10%;
 }
 
-
 .productData {
-    margin: 1% 10% 0%;
+    margin: 2% 10% 0%;
     max-width: 80%;
-    font-size: 0.7em;
-    text-align: center;
+    font-size: 0.8em;
 }
 
 .hidden-input2, .hidden-input {
@@ -141,4 +140,3 @@ input:focus:required:invalid {
     box-shadow: 4px 3px #666;
     transform: translateY(4px);
 }
-
